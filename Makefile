@@ -1,5 +1,6 @@
 PROJECT_NAME:=VVrm
 PROJECT_VERSION:=0.1.0
+PROJECT_SPEC_VERSION=0.0
 
 PROJECT_DIR:=${PROJECT_NAME}.standalone
 PROJECT_TEST_DIR:=${PROJECT_DIR}/${PROJECT_NAME}.Editor.Tests
@@ -80,3 +81,11 @@ publish:
 		dotnet nuget push \
 			-k $(NuGetKey) ${PROJECT_NAME}.${PROJECT_VERSION}.nupkg \
 			-s https://api.nuget.org/v3/index.json
+
+
+#
+.PHONE: generate-spec
+generate-spec:
+	dotnet publish ${PROJECT_DIR}/SpecGenerator -f netcoreapp2.0 -c Release
+	dotnet ${PROJECT_DIR}/SpecGenerator/bin/Release/netcoreapp2.0/SpecGenerator.dll \
+		specification/${PROJECT_SPEC_VERSION}/schema/

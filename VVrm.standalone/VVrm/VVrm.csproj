@@ -22,11 +22,11 @@
 
   <ItemGroup>
     <Compile Include="../../../VJson/Assets/VJson/Runtime/**/*.cs" />
-    <Compile Include="../../../VJson/Assets/VGltf/Runtime/**/*.cs" />
+    <Compile Include="../../../VGltf/Assets/VGltf/Runtime/**/*.cs" />
   </ItemGroup>
 
   <!--ItemGroup>
-    <PackageReference Include="VJson" Version="0.7.2" />
+    <PackageReference Include="VJson" Version="0.7.5" />
     <PackageReference Include="VGltf" Version="0.1.0" />
   </ItemGroup-->
 
