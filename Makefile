@@ -86,6 +86,7 @@ publish:
 #
 .PHONE: generate-spec
 generate-spec:
+	dotnet restore ${PROJECT_DIR}/SpecGenerator
 	dotnet publish ${PROJECT_DIR}/SpecGenerator -f netcoreapp2.0 -c Release
 	dotnet ${PROJECT_DIR}/SpecGenerator/bin/Release/netcoreapp2.0/SpecGenerator.dll \
 		specification/${PROJECT_SPEC_VERSION}/schema/
