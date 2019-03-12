@@ -44,6 +44,7 @@ namespace SpecGenerator
                 if (string.IsNullOrEmpty(schema.Title))
                 {
                     Console.Error.WriteLine("Schemas of VRM must have title: Id = " + id);
+                    continue;
                 }
 
                 var fileName = string.Format("{0}.schema.json", schema.Title);
