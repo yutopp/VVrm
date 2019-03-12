@@ -1,0 +1,50 @@
+{
+    "$id": "vrm.secondaryanimation.spring.schema.json",
+    "title": "vrm.secondaryanimation.spring",
+    "type": "object",
+    "properties": {
+        "bones": {
+            "description": "Specify the node index of the root bone of the swaying object.",
+            "type": "array",
+            "items": {
+                "type": "integer",
+                "minimum": 0
+            }
+        },
+        "center": {
+            "description": "The reference point of a swaying object can be set at any location except the origin. When implementing UI moving with warp, the parent node to move with warp can be specified if you don't want to make the object swaying with warp movement.",
+            "type": "integer"
+        },
+        "colliderGroups": {
+            "description": "Specify the index of the collider group for collisions with swaying objects.",
+            "type": "array",
+            "items": {
+                "type": "integer",
+                "minimum": 0
+            }
+        },
+        "comment": {
+            "description": "Annotation comment",
+            "type": "string"
+        },
+        "dragForce": {
+            "description": "The resistance (deceleration) of automatic animation.",
+            "type": "number"
+        },
+        "gravityDir": {
+            "$ref": "VVrm.V0_x.Types.Vector3"
+        },
+        "gravityPower": {
+            "description": "The strength of gravity.",
+            "type": "number"
+        },
+        "hitRadius": {
+            "description": "The radius of the sphere used for the collision detection with colliders.",
+            "type": "number"
+        },
+        "stiffiness": {
+            "description": "The resilience of the swaying object (the power of returning to the initial pose).",
+            "type": "number"
+        }
+    }
+}

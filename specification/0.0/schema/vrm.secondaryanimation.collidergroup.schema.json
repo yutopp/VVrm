@@ -1,0 +1,19 @@
+{
+    "$id": "vrm.secondaryanimation.collidergroup.schema.json",
+    "title": "vrm.secondaryanimation.collidergroup",
+    "description": "Set sphere balls for colliders used for collision detections with swaying objects.",
+    "type": "object",
+    "properties": {
+        "colliders": {
+            "type": "array",
+            "items": {
+                "$ref": "vrm.secondaryanimation.collider.schema.json"
+            }
+        },
+        "node": {
+            "description": "The node of the collider group for setting up collision detections.",
+            "type": "integer",
+            "minimum": 0
+        }
+    }
+}

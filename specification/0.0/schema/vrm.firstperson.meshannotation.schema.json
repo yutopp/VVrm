@@ -1,0 +1,20 @@
+{
+    "$id": "vrm.firstperson.meshannotation.schema.json",
+    "title": "vrm.firstperson.meshannotation",
+    "type": "object",
+    "properties": {
+        "firstPersonFlag": {
+            "type": "string",
+            "enum": [
+                "Auto",
+                "Both",
+                "ThirdPersonOnly",
+                "FirstPersonOnly"
+            ]
+        },
+        "mesh": {
+            "type": "integer",
+            "minimum": 0
+        }
+    }
+}

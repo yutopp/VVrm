@@ -1,0 +1,14 @@
+{
+    "$id": "vrm.secondaryanimation.collider.schema.json",
+    "title": "vrm.secondaryanimation.collider",
+    "type": "object",
+    "properties": {
+        "offset": {
+            "$ref": "VVrm.V0_x.Types.Vector3"
+        },
+        "radius": {
+            "description": "The radius of the collider.",
+            "type": "number"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "$id": "vrm.blendshape.bind.schema.json",
+    "title": "vrm.blendshape.bind",
+    "type": "object",
+    "required": [
+        "mesh",
+        "index",
+        "weight"
+    ],
+    "properties": {
+        "index": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "mesh": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "weight": {
+            "description": "SkinnedMeshRenderer.SetBlendShapeWeight",
+            "type": "number",
+            "maximum": 100,
+            "minimum": 0
+        }
+    }
+}

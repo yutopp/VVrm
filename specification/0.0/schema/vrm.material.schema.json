@@ -1,0 +1,31 @@
+{
+    "$id": "vrm.material.schema.json",
+    "title": "vrm.material",
+    "type": "object",
+    "properties": {
+        "floatProperties": {
+            "type": "object"
+        },
+        "keywordMap": {
+            "type": "object"
+        },
+        "name": {
+            "type": "string"
+        },
+        "renderQueue": {
+            "type": "integer"
+        },
+        "shader": {
+            "type": "string"
+        },
+        "tagMap": {
+            "type": "object"
+        },
+        "textureProperties": {
+            "type": "object"
+        },
+        "vectorProperties": {
+            "type": "object"
+        }
+    }
+}

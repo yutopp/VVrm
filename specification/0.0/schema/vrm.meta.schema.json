@@ -1,0 +1,95 @@
+{
+    "$id": "vrm.meta.schema.json",
+    "title": "vrm.meta",
+    "type": "object",
+    "required": [
+        "allowedUserName",
+        "violentUssageName",
+        "sexualUssageName",
+        "commercialUssageName",
+        "licenseName"
+    ],
+    "properties": {
+        "allowedUserName": {
+            "description": "A person who can perform with this avatar.",
+            "type": "string",
+            "enum": [
+                "OnlyAuthor",
+                "ExplicitlyLicensedPerson",
+                "Everyone"
+            ]
+        },
+        "author": {
+            "description": "Author of VRM model.",
+            "type": "string"
+        },
+        "commercialUssageName": {
+            "description": "For commercial use",
+            "type": "string",
+            "enum": [
+                "Disallow",
+                "Allow"
+            ]
+        },
+        "contactInformation": {
+            "description": "Contact Information of VRM model author.",
+            "type": "string"
+        },
+        "licenseName": {
+            "description": "License type.",
+            "type": "string",
+            "enum": [
+                "Redistribution_Prohibited",
+                "CC0",
+                "CC_BY",
+                "CC_BY_NC",
+                "CC_BY_SA",
+                "CC_BY_NC_SA",
+                "CC_BY_ND",
+                "CC_BY_NC_ND",
+                "Other"
+            ]
+        },
+        "otherLicenseUrl": {
+            "description": "If “Other” is selected, put the URL link of the license document here.",
+            "type": "string"
+        },
+        "otherPermissionUrl": {
+            "description": "If there are any conditions not mentioned above, put the URL link of the license document here.",
+            "type": "string"
+        },
+        "reference": {
+            "description": "Reference of VRM model.",
+            "type": "string"
+        },
+        "sexualUssageName": {
+            "description": "Permission to perform sexual acts with this avatar.",
+            "type": "string",
+            "enum": [
+                "Disallow",
+                "Allow"
+            ]
+        },
+        "texture": {
+            "description": "Thumbnail of VRM model. It is an index of glTF textures.",
+            "type": "integer",
+            "minimum": 0
+        },
+        "title": {
+            "description": "Title of VRM model.",
+            "type": "string"
+        },
+        "version": {
+            "description": "Version of VRM model.",
+            "type": "string"
+        },
+        "violentUssageName": {
+            "description": "Permission to perform violent acts with this avatar.",
+            "type": "string",
+            "enum": [
+                "Disallow",
+                "Allow"
+            ]
+        }
+    }
+}
