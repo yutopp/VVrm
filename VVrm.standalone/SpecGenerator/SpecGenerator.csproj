@@ -10,8 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="../../Assets/VVrm/Runtime/**/*.cs" />
-    <PackageReference Include="VJson" Version="0.7.5" />
+    <ProjectReference Include="../VVrm/VVrm.csproj" />
   </ItemGroup>
-
 </Project>
