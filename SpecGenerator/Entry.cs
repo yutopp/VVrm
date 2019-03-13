@@ -16,6 +16,8 @@ namespace SpecGenerator
     {
         static void Main(string[] args)
         {
+            VVrm.ExtensionRegistrator.Register();
+
             // Create all JsonSchemas related to VRM from the root class.
             var reg = new JsonSchemaRegistory();
             var _schama = JsonSchemaAttribute.CreateFromClass<VVrm.V0_x.Types.Vrm>(reg);
