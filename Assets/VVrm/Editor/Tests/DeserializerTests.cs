@@ -19,6 +19,8 @@ namespace VVrm.UnitTests
         [TestCaseSource("VrmArgs")]
         public void FromVrmTest(string[] modelPath, Action<VGltf.ResourcesStore> assertVrm)
         {
+            VVrm.ExtensionRegistrator.Register();
+
             var path = modelPath.Aggregate("SampleModels", (b, p) => Path.Combine(b, p));
             using (var fs = new FileStream(path, FileMode.Open))
             {
@@ -38,6 +40,8 @@ namespace VVrm.UnitTests
                 new string[] {"Alicia", "VRM", "AliciaSolid.vrm"},
                 new Action<VGltf.ResourcesStore>(
                     (store) => {
+                        var vrm = store.Gltf.GetExtension<V0_x.Types.Vrm>(V0_x.Types.Vrm.ExtensionName);
+                        Assert.NotNull(vrm);
                     })
             },
 
@@ -45,6 +49,8 @@ namespace VVrm.UnitTests
                 new string[] {"ShinchokuRobo", "shinchoku_robo.vrm"},
                 new Action<VGltf.ResourcesStore>(
                     (store) => {
+                        var vrm = store.Gltf.GetExtension<V0_x.Types.Vrm>(V0_x.Types.Vrm.ExtensionName);
+                        Assert.NotNull(vrm);
                     })
             },
         };
