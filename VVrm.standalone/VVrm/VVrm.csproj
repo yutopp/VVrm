@@ -9,12 +9,16 @@
     <Authors>yutopp</Authors>
 
     <PackageLicenseUrl>https://github.com/yutopp/VVrm/blob/master/LICENSE_1_0.txt</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/yutopp/VVrm/</PackageProjectUrl>
-    <PackageTags>csharp;gltf;glb;serialization;unity</PackageTags>
+    <PackageTags>csharp;vrm;serialization;unity</PackageTags>
+    <PackageLicenseFile>LICENSE_1_0.txt</PackageLicenseFile>
 
     <Description>A VRM extensions serializer/deserializer library written in pure C#.</Description>
     <Copyright>Copyright 2019</Copyright>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE_1_0.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Include="../../Assets/VVrm/Runtime/**/*.cs" />
