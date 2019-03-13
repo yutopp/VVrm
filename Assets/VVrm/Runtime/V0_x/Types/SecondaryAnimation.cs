@@ -30,7 +30,7 @@ namespace VVrm.V0_x.Types
                     Id = "vrm.secondaryanimation.spring.schema.json"/* TODO: Fix usage of Id */)]
         public class Spring
         {
-            [JsonField(Name = "comment")]
+            [JsonField(Name = "comment"), JsonFieldIgnorable]
             [JsonSchema(Description = "Annotation comment")]
             public string comment;
 
@@ -54,7 +54,7 @@ namespace VVrm.V0_x.Types
             // When the value is -1, it means that center node is not specified.
             // This is a historical issue and a compromise for forward compatibility.
             [JsonField(Name = "center")]
-            [JsonSchema(Description = @"The reference point of a swaying object can be set at any location except the origin. When implementing UI moving with warp, the parent node to move with warp can be specified if you don't want to make the object swaying with warp movement.")]
+            [JsonSchema(Description = "The reference point of a swaying object can be set at any location except the origin. When implementing UI moving with warp, the parent node to move with warp can be specified if you don't want to make the object swaying with warp movement.")]
             public int center;
 
             [JsonField(Name = "hitRadius")]
@@ -73,7 +73,7 @@ namespace VVrm.V0_x.Types
         }
 
         [JsonSchema(Title = "vrm.secondaryanimation.collidergroup",
-                    Description = @"Set sphere balls for colliders used for collision detections with swaying objects.",
+                    Description = "Set sphere balls for colliders used for collision detections with swaying objects.",
                     Id = "vrm.secondaryanimation.collidergroup.schema.json"/* TODO: Fix usage of Id */)]
         public class ColliderGroup
         {

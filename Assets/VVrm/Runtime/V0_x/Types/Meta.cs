@@ -57,7 +57,7 @@ namespace VVrm.V0_x.Types
         [JsonSchema(Description = "For commercial use")]
         public UsageLicenseEnum CommercialUsage;
 
-        [JsonField(Name = "otherPermissionUrl")]
+        [JsonField(Name = "otherPermissionUrl"), JsonFieldIgnorable]
         [JsonSchema(Description = "If there are any conditions not mentioned above, put the URL link of the license document here.")]
         public string OtherPermissionUrl;
 
@@ -65,7 +65,7 @@ namespace VVrm.V0_x.Types
         [JsonSchema(Description = "License type.")]
         public LicenseEnum License;
 
-        [JsonField(Name = "otherLicenseUrl")]
+        [JsonField(Name = "otherLicenseUrl"), JsonFieldIgnorable]
         [JsonSchema(Description = "If “Other” is selected, put the URL link of the license document here.")]
         public string OtherLicenseUrl;
 

@@ -16,13 +16,15 @@ namespace VVrm.V0_x.Types
                 Id = "vrm.schema.json"/* TODO: Fix usage of Id */)]
     public class Vrm
     {
-        [JsonField(Name = "exporterVersion", Order = 0)]
+        public static readonly string ExtensionName = "VRM";
+
+        [JsonField(Name = "exporterVersion", Order = 0), JsonFieldIgnorable]
         [JsonSchema(Description = @"Version of exporter that vrm created.")]
         public string ExporterVersion;
 
         [JsonField(Name = "specVersion", Order = 10)]
         [JsonSchema(Description = @"The VRM specification version that this extension uses.")]
-        public string SpecVersion = "0.0";
+        public string SpecVersion = "0.0"; // If not specified, it will be treated as `0.0`.
 
         [JsonField(Name = "meta", Order = 20)]
         public Meta Meta = new Meta();
