@@ -30,7 +30,8 @@ namespace VVrm.UnitTests
                 var ex = schema.Validate(c.Gltf);
                 Assert.Null(ex);
 
-                var store = new VGltf.ResourcesStore(c.Gltf, c.Buffer, new VGltf.ResourceLoaderFromStorage());
+                var loader = new VGltf.ResourceLoaderFromEmbedOnly();
+                var store = new VGltf.ResourcesStore(c.Gltf, c.Buffer, loader);
                 assertVrm(store);
             }
         }

@@ -32,34 +32,34 @@ namespace VVrm.V0_x.Types
         {
             [JsonField(Name = "comment"), JsonFieldIgnorable]
             [JsonSchema(Description = "Annotation comment")]
-            public string comment;
+            public string Comment;
 
             [JsonField(Name = "stiffiness")]
             [JsonSchema(Description = "The resilience of the swaying object (the power of returning to the initial pose).")]
-            public float stiffiness;
+            public float Stiffiness;
 
             [JsonField(Name = "gravityPower")]
             [JsonSchema(Description = "The strength of gravity.")]
-            public float gravityPower;
+            public float GravityPower;
 
             [JsonField(Name = "gravityDir")]
             [JsonSchema(Description = "The direction of gravity. Set (0, -1, 0) for simulating the gravity. Set (1, 0, 0) for simulating the wind.")]
-            public Vector3 gravityDir;
+            public Vector3 GravityDir;
 
             [JsonField(Name = "dragForce")]
             [JsonSchema(Description = "The resistance (deceleration) of automatic animation.")]
-            public float dragForce;
+            public float DragForce;
 
             // NOTE: This value denotes index but may contain -1 as a value.
             // When the value is -1, it means that center node is not specified.
             // This is a historical issue and a compromise for forward compatibility.
             [JsonField(Name = "center")]
             [JsonSchema(Description = "The reference point of a swaying object can be set at any location except the origin. When implementing UI moving with warp, the parent node to move with warp can be specified if you don't want to make the object swaying with warp movement.")]
-            public int center;
+            public int Center;
 
             [JsonField(Name = "hitRadius")]
             [JsonSchema(Description = "The radius of the sphere used for the collision detection with colliders.")]
-            public float hitRadius;
+            public float HitRadius;
 
             [JsonField(Name = "bones")]
             [JsonSchema(Description = "Specify the node index of the root bone of the swaying object.")]

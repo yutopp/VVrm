@@ -1,0 +1,14 @@
+{
+    "name": "VVrm.Editor",
+    "references": [
+        "VVrm",
+        "VJson",
+        "VGltf"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

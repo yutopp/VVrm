@@ -1,0 +1,17 @@
+{
+    "name": "VVrm.Editor.Tests",
+    "references": [
+        "VVrm",
+        "VVrm.Editor",
+        "VJson",
+        "VGltf"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

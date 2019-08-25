@@ -1,0 +1,11 @@
+{
+    "name": "VVrm",
+    "references": [
+        "VJson",
+        "VGltf"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}
