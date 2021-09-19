@@ -1,3 +1,5 @@
+⚠ VRM0 support continues to be developed at https://github.com/yutopp/VGltf. Please check here as well.
+
 # VVrm 👤
 
 > A VRM extensions serializer/deserializer library written in pure C#.
